@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lógica de programação</title>
+    <script>
+        // Pensando em todos os números naturais inferiores a 10 que são múltiplos de 3 ou 5, temos 3, 5, 6 e 9. 
+        // Somando esses múltiplos obtemos o valor 23. Utilize um algorítimo para calcular a soma de todos os múltiplos
+        //  de 3 ou 5 abaixo de 1000
+
+        const calculate = () => {
+            let sum = 0
+            for (let number = 1; number < 1000; number++) {
+                if (number % 3 === 0 || number % 5 === 0) {
+                    sum += number
+                }
+            }
+            console.log(sum)
+            document.getElementById('result').innerHTML = `<p>a soma de todos os múltiplos de 3 ou 5 abaixo de 1000 é ${sum}.</p>`
+        }
+
+    </script>
+</head>
+
+<body onload="calculate()">
+
+    <div id="result">
+
+    </div>
+
+</body>
+
+</html>

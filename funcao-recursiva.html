@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Função recursiva</title>
+    <script>
+        // Crie uma função recursiva para descobrir o 
+        // menor número inteiro divisível por 2, 3 e 10 ao mesmo tempo. Quando encontrá-lo, imprima-o na tela.
+        orderFunction = () => {
+            let num = 1
+            while (true){
+                if(num%2 === 0 && num% 3 ===0 && num%10 ===0){
+                    console.log(num)
+                    document.getElementById('result').innerHTML = `<p>Número divísivel por 2, 3 e 10 é: ${num}</p>`
+                    break
+                }
+                num++
+            }
+        }
+
+    </script>
+</head>
+
+<body onload="orderFunction()">
+
+    <div id="result">
+
+    </div>
+
+</body>
+
+</html>

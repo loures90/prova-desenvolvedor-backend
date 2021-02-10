@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orientacao ao Objeto</title>
+    <script>
+        // Crie uma classe contendo 3 propriedades com seus respectivos gets e 
+        // sets e um método que multiplique as 3 retornando o produto. Deixe um exemplo de
+        //  utilização da sua classe no final do código.
+       
+        class Teste {
+            constructor(number1, number2, number3){
+                this.number1 = number1;
+                this.number2 = number2;
+                this.number3 = number3;
+            }
+            
+            setNumber1(number1){
+                this.number1 = number1
+            }
+            setNumber2(number2){
+                this.number2 = number2
+            }
+            setNumber3(number3){
+                this.number3 = number3
+            }
+
+            getNumber1(){
+                return this.number1
+            }
+            getNumber2(){
+                return this.number2
+            }
+            getNumber3(){
+                return this.number3
+            }
+
+            multiply(){
+                return this.number1 * this.number2 * this.number3
+            }
+        }
+
+        const teste = new Teste(5,4,3)
+
+        const orderFunction = () =>{
+            let number1 = teste.getNumber1()
+            let number2 = teste.getNumber2()
+            let number3 = teste.getNumber3()
+
+            console.log(number1, number2, number3)
+
+            teste.setNumber1(10)
+            teste.setNumber2(11)
+            teste.setNumber3(12)
+
+            number1 = teste.getNumber1()
+            number2 = teste.getNumber2()
+            number3 = teste.getNumber3()
+            
+            console.log(number1, number2, number3)
+
+            let product = teste.multiply()
+            console.log(product)
+        }
+
+
+        
+
+
+    </script>
+</head>
+
+<body onload="orderFunction()">
+
+    <div id="result">
+
+    </div>
+
+</body>
+
+</html>

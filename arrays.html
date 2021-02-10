@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+    <script>
+
+        let array1 = ['ES', 'MG', 'RJ', 'SP', 'MT']
+        let array2 = ['Mato Grosso', 'São Paulo', 'Rio de Janeiro', 'Minas Gerais', 'Espírito Santo']
+        let array3 = []
+
+        orderFunction = () => {
+            while(array2.length > 0){
+            
+                array1.map(estate=>{
+                    if(estate === "MT" && array2[0] === "Mato Grosso"){
+                        array3.push(`${estate} => ${array2[0]}`)
+                    } else if(estate === "MG" && array2[0] === "Minas Gerais"){
+                        array3.push(`${estate} => ${array2[0]}`)
+                    } else if(estate[0] !== "M" && estate[0] === array2[0][0]){
+                        array3.push(`${estate} => ${array2[0]}`)
+                    }
+                })
+
+                array2.shift()    
+            }
+            console.log(array3)
+
+            for( let index =0; index < array3.length; index++){
+                document.getElementById('result').innerHTML += `<p>${index} - ${array3[index]}</p>`
+            }
+        }
+
+    </script>
+</head>
+
+<body onload="orderFunction()">
+
+    <div id="result">
+
+    </div>
+
+</body>
+
+</html>
